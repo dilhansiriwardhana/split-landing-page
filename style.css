@@ -9,6 +9,7 @@
     --right-btn-hover-color: rgba(28, 122, 28, 1);
     --hover-width: 75%;
     --other-width: 25%;
+    --speed: 1000ms
   }
 
   *{
@@ -82,6 +83,10 @@
     background-color: var(--left-bg-color);
   }
 
+  .split.right, .split.left, .split.right::before, .split.left::before {
+    transition: all var(--speed) ease-in-out;
+  }
+
   .split.right {
     right: 0;
     background: url('xbox.jpg');
@@ -123,3 +128,14 @@
     width: var(--other-width);
   }
 
+
+  @media(max-width: 800px) {
+    h1 {
+      font-size: 2rem;
+      top: 30%;
+    }
+    .btn {
+      padding: 1.2rem;
+      width: 12rem;
+    }
+  }
